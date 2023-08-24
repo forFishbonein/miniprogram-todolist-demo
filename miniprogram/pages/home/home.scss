@@ -1,0 +1,44 @@
+/* pages/home.wxss */
+.page-wrap{
+  width: 100%;
+  min-height: 100vh;
+  background: #F7F7F7;
+}
+.title{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F7F7;
+}
+.center-wapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20rpx 0;
+}
+.center-wapper-list{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  // align-items: center;
+  background-color: #ffffff;
+  padding: 20rpx 0;
+  margin-top:30rpx;
+  min-height: 100vh;
+}
+.van-swipe-cell__left,
+.van-swipe-cell__right {
+  display: inline-block;
+  height: 44px;
+  width: 65px;
+  font-size: 15px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+  background-color: #f44;
+} 

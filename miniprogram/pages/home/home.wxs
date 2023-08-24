@@ -1,0 +1,11 @@
+var filter = {
+  dateFormatter: function(date){
+    var month = date.split("/")[0];
+    var day = date.split("/")[1];
+    return month+"月"+day+"日"
+  }
+}
+
+module.exports = {
+  dateFormatter: filter.dateFormatter,
+}

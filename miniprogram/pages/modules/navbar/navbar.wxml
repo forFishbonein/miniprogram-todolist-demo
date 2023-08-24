@@ -1,0 +1,13 @@
+<!--pages/modules/navbar/navar.wxml-->
+<view id="nav-bar" class="wrap">
+  <view class="navi-bar navi-bar-view">
+    <view class="back {{navBack?'':'opacity'}}" catchtap="goBack">
+        <view class="iconfont icon-fanhui"></view>
+    </view>
+    <view class="nav_title" >{{title}}</view>
+    <view class="back opacity">
+        <view class="iconfont icon-fanhui"></view>
+    </view>
+  </view>
+</view>
+<view class="navi-bar-view"></view>

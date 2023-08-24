@@ -1,0 +1,17 @@
+{
+  "name": "miniprogram-ts-less-quickstart",
+  "version": "1.0.0",
+  "description": "小程序 demo",
+  "main": "app.ts",
+  "scripts": {},
+  "keywords": [],
+  "author": "Aron",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.10.19",
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^2.8.3-1"
+  }
+}

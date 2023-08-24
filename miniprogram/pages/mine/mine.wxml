@@ -1,0 +1,6 @@
+<!--pages/mine/mine.wxml-->
+<nav-bar title="我的"></nav-bar>
+<view class="my-container">
+  <van-button type="warning" bindtap="logout">退出登录</van-button>
+</view>
+<van-toast id="van-toast" />

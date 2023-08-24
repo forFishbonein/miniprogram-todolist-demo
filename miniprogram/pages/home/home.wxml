@@ -1,0 +1,57 @@
+<!-- 小程序需要有登录，做个底部有2个菜单，一个事件列表，一个我的，事件列表里面展示所有的todoList，没有todoList可以添加，添加的form表单包含事件标题，时间，备注；我的里面就暂时只做一个退出； -->
+<!--pages/home.wxml-->
+<wxs module="filter" src="./home.wxs"></wxs>
+<view class="page-wrap" id="container">
+  <nav-bar title="首页"></nav-bar>
+  <view class="title">TODOLIST</view>
+  <!-- <van-sticky container="{{ container }}"> -->
+    <view class="content">
+      <van-cell-group>
+        <van-field
+          model:value="{{ title }}"
+          clearable
+          label="标题"
+          icon="edit"
+          placeholder="请输入事项标题"
+          bind:click-icon="onClickIcon"
+        />
+        <van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay"/>
+        <van-calendar show="{{ show }}" bind:close="onClose" show-confirm="{{ false }}" bind:confirm="onConfirm" color="#02B6B9"/>
+        <van-field
+          model:value="{{ notes }}"
+          label="备注"
+          type="textarea"
+          placeholder="请输入备注"
+          autosize
+          border="{{ false }}"
+        />
+      </van-cell-group>
+      <view class="center-wapper">
+        <van-button plain type="primary" color="#02B6B9" size="small" bindtap="submitThings" icon="plus">添加</van-button>
+      </view>
+    </view>
+  <!-- </van-sticky> -->
+  <view class="center-wapper-list">
+    <van-swipe-cell right-width="{{ 65 }}" wx:for="{{allThings}}" wx:key="index">
+      <!-- <view slot="left">选择</view> -->
+      <van-cell-group>
+        <!-- <van-cell title="单元格" value="内容"> -->
+          <van-collapse value="{{ activeNames }}" bind:change="onChange">
+            <van-collapse-item title="{{index+1}} . {{filter.dateFormatter(item.date)}} — {{item.title}}" name="{{index}}">
+              备注：{{item.notes}}
+            </van-collapse-item>
+          </van-collapse>
+        <!-- </van-cell> -->
+      </van-cell-group>
+      <view slot="right" class="van-swipe-cell__right" bindtap="onDelete" data-index="{{index}}">删除</view>
+    </van-swipe-cell>
+    <!-- <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+      <view slot="left" class="van-swipe-cell__left">选择</view>
+      <van-cell-group>
+        <van-cell title="单元格" value="内容" />
+      </van-cell-group>
+      <view slot="right" class="van-swipe-cell__right">删除</view>
+    </van-swipe-cell> -->
+  </view>
+  <van-dialog id="van-dialog" />
+</view>

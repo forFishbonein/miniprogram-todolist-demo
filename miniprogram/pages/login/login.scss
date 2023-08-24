@@ -1,0 +1,40 @@
+/* pages/login/login.wxss */
+.title{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F7F7;
+  border-bottom:2px dashed #02B6B9;
+}
+.center-wapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 60rpx 0;
+  .login-button{
+    width: 50vw;
+  }
+  .van-button{
+    height: 100rpx !important;
+  }
+}
+.container-login{
+  border-top:2px dashed #02B6B9;
+}
+.info-container{
+  width: 100%;
+  // flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // padding-bottom: 100rpx;
+  // background-color: #02B6B9;
+}
+.wapper-all{
+  display: flex;
+  flex-direction: column;
+}

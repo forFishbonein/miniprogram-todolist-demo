@@ -1,0 +1,42 @@
+<!--pages/login/login.wxml-->
+<!-- wx.setStorageSync('agent_info', agent_info); 
+let openid = wx.getStorageSync("agent_openid");
+-->
+<nav-bar title="登录" navBack="{{false}}"></nav-bar>
+<view class="wapper-all">
+<view class="title">欢迎来到TODOLIST！</view>
+<van-image
+  width="100vw"
+  height="50vh"
+  fit="fill"
+  src="https://th.bing.com/th/id/OIP.hxf2uTNGSshD7ZzKAURnmwHaHa?pid=ImgDet&rs=1"
+/>
+<view class="container-login"></view>
+<view class="info-container">
+<van-cell-group>
+  <van-field
+    model:value="{{ username }}"
+    required
+    clearable
+    label="用户名"
+    icon="user-o"
+    placeholder="请输入用户名"
+    bind:click-icon="onClickIcon"
+  />
+
+  <van-field
+    model:value="{{ password }}"
+    type="password"
+    label="密码"
+    icon="aim"
+    placeholder="请输入密码"
+    required
+    border="{{ false }}"
+  />
+</van-cell-group>
+<view class="center-wapper">
+  <van-button round type="info" size="large" color="linear-gradient(to right, #02B6B9, #4bb0ff)" class="login-button" bindtap="onLogin">登录</van-button>
+</view>
+</view>
+</view>
+<van-toast id="van-toast" />
